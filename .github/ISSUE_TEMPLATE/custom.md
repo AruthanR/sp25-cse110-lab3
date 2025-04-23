@@ -7,14 +7,6 @@ assignees: ''
 
 ---
 
----
-name: Task
-about: Track a task for this lab
-title: "[TASK] "
-labels: task
-assignees: AruthanR
----
-
 ## Task Description
 <!-- e.g., Add flexbox layout to meeting minutes page -->
 

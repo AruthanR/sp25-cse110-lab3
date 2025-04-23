@@ -53,8 +53,6 @@ h1, h2, h3 {
   color: orange;
 }
 
-/* ----- Box Model Styling ----- */
-
 section {
   margin-top: 1rem;
   margin-right: 2rem;
@@ -74,4 +72,51 @@ section {
   padding: 0.5rem 1rem 1.5rem 2rem;
   border: 2px dashed #888;
   border-radius: 12px;
+}
+
+/* ----- Layout Task (Flexbox, Grid, Display, Positioning) ----- */
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: #d0f0ff;
+  padding: 1rem;
+}
+
+.flex-item {
+  background-color: #a0d8ef;
+  padding: 1rem;
+  flex-grow: 1;
+  text-align: center;
+  min-width: 100px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: 2rem;
+  background-color: #f0e0ff;
+  padding: 1rem;
+}
+
+.grid-item {
+  background-color: #dab6fc;
+  padding: 1rem;
+  text-align: center;
+  height: 100px;
+  max-width: 200px;
+}
+
+#layout-demo {
+  position: relative;
+  min-width: 300px;
+  max-width: 800px;
+}
+
+.grid-item:first-child {
+  position: absolute;
+  top: 0;
+  right: 0;
 }

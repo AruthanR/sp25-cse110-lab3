@@ -37,6 +37,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
+nav a:active {
+  color: red;
+}
+
 main {
   margin: 2rem;
   padding: 1rem;
@@ -58,9 +62,7 @@ section {
   margin-right: 2rem;
   margin-bottom: 1.5rem;
   margin-left: 2rem;
-
   padding: 1rem 2rem 1rem 2rem;
-
   border-style: solid;
   border-color: #ccc;
   border-width: 2px;
@@ -73,8 +75,6 @@ section {
   border: 2px dashed #888;
   border-radius: 12px;
 }
-
-/* ----- Layout Task (Flexbox, Grid, Display, Positioning) ----- */
 
 .flex-container {
   display: flex;
@@ -119,4 +119,68 @@ section {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+/* ---------- Selectors ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+p[style] {
+  font-weight: bold;
+}
+
+main > section {
+  background-color: #fefefe;
+}
+
+section + section {
+  border-left: 4px solid #ccc;
+}
+
+section ~ section h2 {
+  color: teal;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+h2, p {
+  line-height: 1.4;
+}
+
+form:has(input[type="radio"]:checked) {
+  background-color: #ffe;
+}
+
+form {
+  & label {
+    font-size: 1rem;
+  }
+
+  & textarea {
+    border: 1px solid #888;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
 }

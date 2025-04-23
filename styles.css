@@ -1,0 +1,24 @@
+/* External stylesheet setup */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  background-color: #eee;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+main {
+  margin: 2rem;
+  padding: 1rem;
+  background-color: white;
+  border: 1px solid #ccc;
+}

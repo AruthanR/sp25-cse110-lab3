@@ -6,11 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pomodoro Timer First Brainstorm</title>
     <link rel="icon" href="favicon.ico" />
-
-  
     <link rel="stylesheet" href="styles.css" />
 
-    
     <style>
       header {
         background-color: hsl(210, 60%, 85%);
@@ -19,7 +16,6 @@
       }
     </style>
   </head>
-
   <body>
     <header>
       <h1>Pomodoro Timer First Brainstorm</h1>
@@ -36,11 +32,12 @@
         <li><a href="#misc">Miscellaneous</a></li>
         <li><a href="#media">Recordings</a></li>
         <li><a href="#form">Feedback Form</a></li>
+        <li><a href="#layout-demo">Layout Demo</a></li>
       </ul>
     </nav>
 
     <main>
-      <section id="attendance" style="border: 2px dashed orange;"> 
+      <section id="attendance" style="border: 2px dashed orange;">
         <h2>Attendance</h2>
         <ul>
           <li>Aruthan Raveendra</li>
@@ -50,6 +47,120 @@
         </ul>
       </section>
 
+      <section id="agenda">
+        <h2>Agenda</h2>
+        <ol>
+          <li>Check-in and project overview</li>
+          <li>Discuss initial feature ideas</li>
+          <li>Sketch UI layout</li>
+        </ol>
+      </section>
+
+      <section id="unfinished">
+        <h2>Unfinished Business</h2>
+        <p>No updates from last meeting; this is the first official meeting.</p>
+      </section>
+
+      <section id="new">
+        <h2>New Business</h2>
+        <p><strong>Alex</strong> proposed using the <em>Pomodoro technique</em> as the core idea. <br />
+        <b>Jane</b> suggested tracking completed sessions in the app. <br />
+        <i>Aruthan</i> emphasized the importance of a distraction-free UI.</p>
+        <p><em>This text uses a <span style="color: color-mix(in srgb, red 40%, white);">CSS color mix</span> and <u>text-decoration</u>.</em></p>
+      </section>
+
+      <section id="misc">
+        <h2>Miscellaneous</h2>
+        <details>
+          <summary>Questions & Concerns</summary>
+          <ul>
+            <li>Do we want a mobile-first layout?</li>
+            <li>How will user data be stored?</li>
+          </ul>
+        </details>
+        <p>See architecture diagram below:</p>
+        <img src="diagram.png" alt="Pomodoro App Architecture Sketch" />
+        <hr />
+      </section>
+
+      <section id="media">
+        <h2>Meeting Recordings</h2>
+        <p>Audio recording:</p>
+        <audio controls>
+          <source src="meeting-audio.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+
+        <p>Video recording:</p>
+        <video controls width="400">
+          <source src="meeting-video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section id="form">
+        <h2>Feedback Form</h2>
+        <form>
+          <fieldset>
+            <legend>Meeting Feedback</legend>
+
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" /><br /><br />
+
+            <label for="date">Date of Meeting:</label><br />
+            <input type="date" id="date" name="date" /><br /><br />
+
+            <label>Was the meeting helpful?</label><br />
+            <input type="radio" id="yes" name="helpful" value="yes" />
+            <label for="yes">Yes</label><br />
+            <input type="radio" id="no" name="helpful" value="no" />
+            <label for="no">No</label><br /><br />
+
+            <label>What was discussed? (check all that apply)</label><br />
+            <input type="checkbox" id="pomodoro" name="topic" value="pomodoro" />
+            <label for="pomodoro">Pomodoro</label><br />
+            <input type="checkbox" id="ui" name="topic" value="ui" />
+            <label for="ui">UI/UX</label><br /><br />
+
+            <label for="experience">Your experience:</label><br />
+            <textarea id="experience" name="experience" rows="4" cols="40"></textarea><br /><br />
+
+            <label for="mood">Mood:</label><br />
+            <input list="moods" id="mood" name="mood" />
+            <datalist id="moods">
+              <option value="Excited">Excited</option>
+              <option value="Neutral">Neutral</option>
+              <option value="Tired">Tired</option>
+            </datalist><br /><br />
+
+            <label for="team">Choose a team:</label><br />
+            <select id="team" name="team">
+              <option value="alpha">Alpha</option>
+              <option value="beta">Beta</option>
+              <option value="gamma">Gamma</option>
+            </select><br /><br />
+
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section id="layout-demo">
+        <h2>Layout Demo</h2>
+
+        <div class="flex-container">
+          <div class="flex-item">One</div>
+          <div class="flex-item">Two</div>
+          <div class="flex-item">Three</div>
+        </div>
+
+        <div class="grid-container">
+          <div class="grid-item">A</div>
+          <div class="grid-item">B</div>
+          <div class="grid-item">C</div>
+          <div class="grid-item">D</div>
+        </div>
+      </section>
     </main>
 
     <footer>

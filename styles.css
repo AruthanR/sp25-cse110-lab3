@@ -1,6 +1,6 @@
 :root {
   --primary-bg: #fff7e6;
-  --highlight: color-mix(in srgb, orange 70%, yellow);
+  --highlight: color: #ff9999;
   --fallback-color: purple;
 }
 
